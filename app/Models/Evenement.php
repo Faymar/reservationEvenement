@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Evenement extends Model
 {
@@ -22,8 +23,12 @@ class Evenement extends Model
         return $this->belongsTo(Association::class);
     }
 
+    // public function users()
+    // {
+    //     return $this->belongsToMany(User::class)->withPivot('nombrePlace', 'reference', 'est_acepte')->withTimestamps();
+    // }
     public function users()
     {
-        return $this->belongsToMany(User::class)->withPivot('reference', 'est_acepte')->withTimestamps();
+        return $this->belongsToMany(User::class)->withPivot('nombrePlace', 'reference', 'est_acepte', 'id')->withTimestamps();
     }
 }

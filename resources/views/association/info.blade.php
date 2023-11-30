@@ -5,19 +5,19 @@
         SAMA EVEN
     </div>
 
-    <form class="py-4 px-6" method="POST" action="{{ route('login') }}">
+    <form class="py-4 px-6" method="POST" action="{{ route('EregistrerInfo') }}">
         @csrf
         <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="email">
-                Email
+                Slogan
             </label>
-            <input name="email" :value="old('email')" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Entrez votre email">
+            <input name="slogan" :value="old('slogan')" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="Entrez le sologan de votre association">
         </div>
         <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="name">
-                Mot de Passe
+                Date_creation
             </label>
-            <input type="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Donnez votre mot de passe">
+            <input type="date" name="date_creation" :value="old('date_creation')" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" placeholder="Donnez votre mot de passe">
         </div>
         <div class="flex items-center justify-center mb-4">
             <button class="bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 focus:outline-none focus:shadow-outline" type="submit">

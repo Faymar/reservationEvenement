@@ -22,6 +22,7 @@ class User extends Authenticatable
     {
         return $this->hasOne(Client::class);
     }
+
     public function association()
     {
         return $this->hasOne(Association::class);
@@ -29,7 +30,12 @@ class User extends Authenticatable
 
     public function evenements()
     {
-        return $this->belongsToMany(Evenement::class)->withPivot('reference', 'est_acepte')->withTimestamps();
+        return $this->belongsToMany(Evenement::class)->withPivot('nombrePlace', 'reference', 'est_acepte', 'user_id')->withTimestamps();
+    }
+
+    public function evenement()
+    {
+        return $this->hasMany(Evenement::class);
     }
     /**
      * The attributes that are mass assignable.
@@ -40,6 +46,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
