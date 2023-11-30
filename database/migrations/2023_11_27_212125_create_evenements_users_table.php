@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('evenements_users', function (Blueprint $table) {
+        Schema::create('evenement_user', function (Blueprint $table) {
             $table->id();
-            $table->string('reference');
+            $table->string('nombrePlace')->default(1);
+            $table->string('reference')->unique();
             $table->boolean('est_acepte')->default(true);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('evenement_id');

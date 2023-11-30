@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->date('date_limite_iscription');
             $table->string('image');
-            $table->boolean('est_clos')->default(true);
+            $table->boolean('est_clos')->default(false);
             $table->date('date_evenement');
             $table->integer('nombre_place');
             $table->unsignedBigInteger('association_id');
