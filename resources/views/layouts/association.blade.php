@@ -39,8 +39,7 @@
                         <i class="fas fa-user text-gray-900 text-lg"></i>
                     </button>
                     <ul class="dropdown-menu absolute hidden text-gray-900 pt-1">
-                        <li class=""><a class="rounded-t bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
-                        <li class=""><a class="bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
+                        <li class=""><a class="rounded-t bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="{{ route('profile.show') }}">Profil</a></li>
                         <li class="">
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf

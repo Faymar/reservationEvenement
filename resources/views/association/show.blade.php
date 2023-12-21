@@ -82,7 +82,7 @@
                             @csrf
                             @method('patch')
                             <button type="submit" class="bg-yellow-300 hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded m-1">
-                                Reusé
+                                Refusé
                             </button>
                         </form>
                         @else
@@ -90,9 +90,6 @@
                             Reservation deja Reusé
                         </button>
                         @endif
-
-
-
                     </td>
                     <!-- <td class="py-2 px-4 border-b border-grey-light">{{$evenement->association_id}}</td> -->
                 </tr>
