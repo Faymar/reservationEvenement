@@ -32,7 +32,7 @@ Route::middleware([
 Route::get('/home', [HomeController::class, 'index']);
 
 Route::prefix('association')
-    ->middleware('auth:sanctum')
+    ->middleware(['auth:sanctum', 'association'])
     ->controller()
     ->group(function () {
         Route::get('/info', [AssociationController::class, 'infosAssoc']);

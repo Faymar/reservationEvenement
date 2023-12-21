@@ -33,8 +33,8 @@
                 <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                     @if (Route::has('login'))
                     @auth
-                    @if (Auth::user()->role=='asssociation')
-                    <li><a class="md:p-4 py-3 px-0 block" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                    @if (Auth::user()->role == 'asssociation')
+                    <li><a class="md:p-4 py-3 px-0 block" href="{{ url('/asssociation/dashboard') }}">Dashboard</a></li>
                     @else
                     <li>
                         <div class="space-x-5">
